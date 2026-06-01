@@ -1,247 +1,181 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <!-- Background gradient: deep notte -->
-    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="i4-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#040315"/>
-      <stop offset="100%" stop-color="#07041f"/>
+      <stop offset="100%" stop-color="#070418"/>
     </linearGradient>
-    <!-- Angel source glow: warm gold -->
-    <radialGradient id="glowAngel1" cx="50%" cy="50%" r="50%">
+    <linearGradient id="i4-trunk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#da980e" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#da980e" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="i4-branch-l" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="i4-branch-r" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="i4-twig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="i4-root" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#da980e" stop-opacity="0.60"/>
       <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowAngel2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f0b030" stop-opacity="0.55"/>
+    <radialGradient id="i4-g-gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.70"/>
       <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowAngel3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#da980e" stop-opacity="0.50"/>
-      <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Venture node glow: azure -->
-    <radialGradient id="glowVenture1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.50"/>
+    <radialGradient id="i4-g-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.65"/>
       <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowVenture2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowVenture3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glowVenture4" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Light beam gradient: gold→azure -->
-    <linearGradient id="beam1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#da980e" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.30"/>
-    </linearGradient>
-    <linearGradient id="beam2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f0b030" stop-opacity="0.70"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.25"/>
-    </linearGradient>
-    <linearGradient id="beam3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#da980e" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.28"/>
-    </linearGradient>
-    <!-- Seed/spark gradient -->
-    <radialGradient id="seedGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffd060" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#da980e" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Venture size gradient — bigger at bottom -->
-    <linearGradient id="ventureGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#3a9fd8" stop-opacity="0.9"/>
-    </linearGradient>
-    <!-- Pattern for grid dots -->
-    <pattern id="dots4" width="32" height="32" patternUnits="userSpaceOnUse">
-      <circle cx="16" cy="16" r="1" fill="#ffffff" fill-opacity="0.04"/>
+    <filter id="i4-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="i4-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="i4-micro" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <pattern id="i4-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.7" fill="rgba(255,255,255,0.04)"/>
     </pattern>
-    <!-- Filter: soft glow blur -->
-    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="18" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <filter id="beamBlur" x="-20%" y="0%" width="140%" height="100%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="500" fill="url(#bg4)"/>
-  <rect width="800" height="500" fill="url(#dots4)"/>
+  <rect width="800" height="500" fill="url(#i4-bg)"/>
+  <rect width="800" height="500" fill="url(#i4-dots)"/>
 
-  <!-- Horizontal divider line: angel tier / venture tier -->
-  <line x1="60" y1="220" x2="740" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 8"/>
+  <!-- Root glow -->
+  <ellipse cx="400" cy="480" rx="120" ry="40" fill="url(#i4-root)" filter="url(#i4-soft)"/>
 
-  <!-- ========== ANGEL SOURCE NODES (top tier) ========== -->
+  <!-- ── ROOT NODE ───────────────────────────────────────────────── -->
+  <circle cx="400" cy="462" r="26" fill="url(#i4-g-gold)" filter="url(#i4-glow)"/>
+  <circle cx="400" cy="462" r="14" fill="none" stroke="#da980e" stroke-width="1.5" stroke-opacity="0.55"/>
+  <circle cx="400" cy="462" r="8"  fill="#da980e" fill-opacity="0.90" stroke="rgba(255,200,80,0.6)" stroke-width="1.5"/>
+  <circle cx="400" cy="462" r="3"  fill="rgba(255,230,140,0.95)"/>
 
-  <!-- Angel 1 — left: x=180, y=110 -->
-  <!-- Glow halo -->
-  <ellipse cx="180" cy="110" rx="70" ry="70" fill="url(#glowAngel1)" filter="url(#softGlow)"/>
-  <!-- Outer ring -->
-  <circle cx="180" cy="110" r="36" fill="none" stroke="#da980e" stroke-width="1.5" stroke-opacity="0.5"/>
-  <!-- Mid ring pulse -->
-  <circle cx="180" cy="110" r="26" fill="none" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <!-- Core -->
-  <circle cx="180" cy="110" r="18" fill="#da980e" fill-opacity="0.15" stroke="#f0b030" stroke-width="2"/>
-  <!-- Inner core bright -->
-  <circle cx="180" cy="110" r="8" fill="#ffd060" fill-opacity="0.85"/>
-  <!-- Ray lines -->
-  <line x1="180" y1="74" x2="180" y2="68" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="180" y1="146" x2="180" y2="152" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="144" y1="110" x2="138" y2="110" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="216" y1="110" x2="222" y2="110" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="154" y1="84" x2="149" y2="79" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="206" y1="84" x2="211" y2="79" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="154" y1="136" x2="149" y2="141" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="206" y1="136" x2="211" y2="141" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- ── TRUNK ────────────────────────────────────────────────────── -->
+  <line x1="400" y1="462" x2="400" y2="360" stroke="url(#i4-trunk)" stroke-width="2.8"/>
 
-  <!-- Angel 2 — center: x=400, y=90 (slightly higher, primary) -->
-  <ellipse cx="400" cy="90" rx="90" ry="90" fill="url(#glowAngel2)" filter="url(#softGlow)"/>
-  <circle cx="400" cy="90" r="44" fill="none" stroke="#da980e" stroke-width="1.8" stroke-opacity="0.55"/>
-  <circle cx="400" cy="90" r="32" fill="none" stroke="#f0b030" stroke-width="1.2" stroke-opacity="0.45"/>
-  <circle cx="400" cy="90" r="22" fill="#da980e" fill-opacity="0.18" stroke="#f0b030" stroke-width="2.5"/>
-  <circle cx="400" cy="90" r="10" fill="#ffd060" fill-opacity="0.92"/>
-  <!-- Larger rays for primary angel -->
-  <line x1="400" y1="46" x2="400" y2="38" stroke="#f0b030" stroke-width="2" stroke-opacity="0.65"/>
-  <line x1="400" y1="134" x2="400" y2="142" stroke="#f0b030" stroke-width="2" stroke-opacity="0.65"/>
-  <line x1="356" y1="90" x2="348" y2="90" stroke="#f0b030" stroke-width="2" stroke-opacity="0.65"/>
-  <line x1="444" y1="90" x2="452" y2="90" stroke="#f0b030" stroke-width="2" stroke-opacity="0.65"/>
-  <line x1="369" y1="59" x2="363" y2="53" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.5"/>
-  <line x1="431" y1="59" x2="437" y2="53" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.5"/>
-  <line x1="369" y1="121" x2="363" y2="127" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.5"/>
-  <line x1="431" y1="121" x2="437" y2="127" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- ── LEVEL 1 BRANCHES (from trunk at y=360) ───────────────────── -->
+  <!-- Left branch -->
+  <line x1="400" y1="360" x2="270" y2="280" stroke="url(#i4-branch-l)" stroke-width="2.0"/>
+  <!-- Right branch -->
+  <line x1="400" y1="360" x2="530" y2="280" stroke="url(#i4-branch-r)" stroke-width="2.0"/>
 
-  <!-- Angel 3 — right: x=620, y=110 -->
-  <ellipse cx="620" cy="110" rx="70" ry="70" fill="url(#glowAngel3)" filter="url(#softGlow)"/>
-  <circle cx="620" cy="110" r="36" fill="none" stroke="#da980e" stroke-width="1.5" stroke-opacity="0.5"/>
-  <circle cx="620" cy="110" r="26" fill="none" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <circle cx="620" cy="110" r="18" fill="#da980e" fill-opacity="0.15" stroke="#f0b030" stroke-width="2"/>
-  <circle cx="620" cy="110" r="8" fill="#ffd060" fill-opacity="0.85"/>
-  <line x1="620" y1="74" x2="620" y2="68" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="620" y1="146" x2="620" y2="152" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="584" y1="110" x2="578" y2="110" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="656" y1="110" x2="662" y2="110" stroke="#f0b030" stroke-width="1.5" stroke-opacity="0.6"/>
-  <line x1="594" y1="84" x2="589" y2="79" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
-  <line x1="646" y1="84" x2="651" y2="79" stroke="#f0b030" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Level 1 junction node -->
+  <circle cx="400" cy="360" r="22" fill="url(#i4-g-gold)" filter="url(#i4-glow)"/>
+  <circle cx="400" cy="360" r="10" fill="none" stroke="#da980e" stroke-width="1.2" stroke-opacity="0.50"/>
+  <circle cx="400" cy="360" r="6"  fill="#da980e" fill-opacity="0.85" stroke="rgba(255,200,80,0.5)" stroke-width="1"/>
+  <circle cx="400" cy="360" r="2.5" fill="rgba(255,230,140,0.9)"/>
 
-  <!-- ========== LIGHT BEAMS (angel → venture) ========== -->
+  <!-- ── LEVEL 2 BRANCHES (from y=280 endpoints) ──────────────────── -->
+  <!-- Left fork: 270,280 → 200,200 and 270,280 → 340,195 -->
+  <line x1="270" y1="280" x2="200" y2="200" stroke="url(#i4-branch-l)" stroke-width="1.5"/>
+  <line x1="270" y1="280" x2="340" y2="195" stroke="url(#i4-twig)"    stroke-width="1.5"/>
 
-  <!-- Angel 1 (180,110) → Venture A (120,310) -->
-  <line x1="180" y1="128" x2="120" y2="295" stroke="url(#beam1)" stroke-width="2" stroke-opacity="0.6" filter="url(#beamBlur)"/>
-  <!-- Angel 1 (180,110) → Venture B (250,330) -->
-  <line x1="180" y1="128" x2="250" y2="315" stroke="url(#beam1)" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Right fork: 530,280 → 460,195 and 530,280 → 600,200 -->
+  <line x1="530" y1="280" x2="460" y2="195" stroke="url(#i4-twig)"    stroke-width="1.5"/>
+  <line x1="530" y1="280" x2="600" y2="200" stroke="url(#i4-branch-r)" stroke-width="1.5"/>
 
-  <!-- Angel 2 (400,90) → Venture C (300,340) -->
-  <line x1="400" y1="112" x2="300" y2="325" stroke="url(#beam2)" stroke-width="2.5" stroke-opacity="0.65" filter="url(#beamBlur)"/>
-  <!-- Angel 2 (400,90) → Venture D (400,360) -->
-  <line x1="400" y1="112" x2="400" y2="345" stroke="url(#beam2)" stroke-width="3" stroke-opacity="0.70" filter="url(#beamBlur)"/>
-  <!-- Angel 2 (400,90) → Venture E (500,340) -->
-  <line x1="400" y1="112" x2="500" y2="325" stroke="url(#beam2)" stroke-width="2.5" stroke-opacity="0.65" filter="url(#beamBlur)"/>
+  <!-- Level 2 junction nodes -->
+  <circle cx="270" cy="280" r="18" fill="url(#i4-g-gold)" filter="url(#i4-glow)"/>
+  <circle cx="270" cy="280" r="8"  fill="none" stroke="#da980e" stroke-width="1" stroke-opacity="0.45"/>
+  <circle cx="270" cy="280" r="5"  fill="#da980e" fill-opacity="0.80"/>
+  <circle cx="270" cy="280" r="2"  fill="rgba(255,230,140,0.85)"/>
 
-  <!-- Angel 3 (620,110) → Venture E (500,340) -->
-  <line x1="620" y1="128" x2="500" y2="325" stroke="url(#beam3)" stroke-width="1.5" stroke-opacity="0.4"/>
-  <!-- Angel 3 (620,110) → Venture F (670,310) -->
-  <line x1="620" y1="128" x2="670" y2="295" stroke="url(#beam3)" stroke-width="2" stroke-opacity="0.6" filter="url(#beamBlur)"/>
+  <circle cx="530" cy="280" r="18" fill="url(#i4-g-gold)" filter="url(#i4-glow)"/>
+  <circle cx="530" cy="280" r="8"  fill="none" stroke="#da980e" stroke-width="1" stroke-opacity="0.45"/>
+  <circle cx="530" cy="280" r="5"  fill="#da980e" fill-opacity="0.80"/>
+  <circle cx="530" cy="280" r="2"  fill="rgba(255,230,140,0.85)"/>
 
-  <!-- Horizontal connection between angels (solidarity) -->
-  <line x1="216" y1="110" x2="356" y2="90" stroke="#da980e" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 6"/>
-  <line x1="444" y1="90" x2="584" y2="110" stroke="#da980e" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+  <!-- ── LEVEL 3 BRANCHES ──────────────────────────────────────────── -->
+  <!-- From 200,200 → 150,128 and 240,118 -->
+  <line x1="200" y1="200" x2="155" y2="130" stroke="url(#i4-twig)" stroke-width="1.2"/>
+  <line x1="200" y1="200" x2="242" y2="122" stroke="url(#i4-twig)" stroke-width="1.0"/>
+  <!-- From 340,195 → 308,118 and 372,112 -->
+  <line x1="340" y1="195" x2="310" y2="120" stroke="url(#i4-twig)" stroke-width="1.0"/>
+  <line x1="340" y1="195" x2="368" y2="112" stroke="url(#i4-twig)" stroke-width="0.9"/>
+  <!-- From 460,195 → 430,112 and 464,105 -->
+  <line x1="460" y1="195" x2="432" y2="115" stroke="url(#i4-twig)" stroke-width="0.9"/>
+  <line x1="460" y1="195" x2="488" y2="115" stroke="url(#i4-twig)" stroke-width="1.0"/>
+  <!-- From 600,200 → 558,130 and 645,128 -->
+  <line x1="600" y1="200" x2="558" y2="130" stroke="url(#i4-twig)" stroke-width="1.0"/>
+  <line x1="600" y1="200" x2="645" y2="130" stroke="url(#i4-twig)" stroke-width="1.2"/>
 
-  <!-- ========== SEED SPARKS (mid-transition points) ========== -->
-  <!-- Small glowing seeds along beam paths -->
-  <circle cx="160" cy="210" r="4" fill="#ffd060" fill-opacity="0.55"/>
-  <circle cx="220" cy="230" r="3" fill="#f0b030" fill-opacity="0.45"/>
-  <circle cx="350" cy="215" r="5" fill="#ffd060" fill-opacity="0.6"/>
-  <circle cx="400" cy="230" r="5" fill="#ffd060" fill-opacity="0.65"/>
-  <circle cx="450" cy="215" r="5" fill="#ffd060" fill-opacity="0.6"/>
-  <circle cx="560" cy="225" r="3" fill="#f0b030" fill-opacity="0.45"/>
-  <circle cx="640" cy="210" r="4" fill="#ffd060" fill-opacity="0.55"/>
+  <!-- Level 3 junction nodes -->
+  <circle cx="200" cy="200" r="14" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="200" cy="200" r="5"  fill="#5bc2fc" fill-opacity="0.80" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="200" cy="200" r="2"  fill="rgba(200,240,255,0.85)"/>
 
-  <!-- ========== VENTURE NODES (bottom tier — growing) ========== -->
+  <circle cx="340" cy="195" r="14" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="340" cy="195" r="5"  fill="#5bc2fc" fill-opacity="0.78" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="340" cy="195" r="2"  fill="rgba(200,240,255,0.85)"/>
 
-  <!-- Venture A — leftmost, small-medium: x=120, y=310 -->
-  <ellipse cx="120" cy="310" rx="50" ry="50" fill="url(#glowVenture1)"/>
-  <circle cx="120" cy="310" r="28" fill="none" stroke="#5bc2fc" stroke-width="1.2" stroke-opacity="0.40"/>
-  <circle cx="120" cy="310" r="20" fill="#5bc2fc" fill-opacity="0.12" stroke="#5bc2fc" stroke-width="1.8"/>
-  <circle cx="120" cy="310" r="10" fill="#5bc2fc" fill-opacity="0.75"/>
-  <circle cx="120" cy="310" r="4" fill="#e8f8ff" fill-opacity="0.9"/>
+  <circle cx="460" cy="195" r="14" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="460" cy="195" r="5"  fill="#5bc2fc" fill-opacity="0.78" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="460" cy="195" r="2"  fill="rgba(200,240,255,0.85)"/>
 
-  <!-- Venture B — left-center, medium: x=250, y=330 -->
-  <ellipse cx="250" cy="332" rx="60" ry="60" fill="url(#glowVenture2)"/>
-  <circle cx="250" cy="332" r="34" fill="none" stroke="#5bc2fc" stroke-width="1.3" stroke-opacity="0.42"/>
-  <circle cx="250" cy="332" r="24" fill="#5bc2fc" fill-opacity="0.13" stroke="#5bc2fc" stroke-width="2"/>
-  <circle cx="250" cy="332" r="13" fill="#5bc2fc" fill-opacity="0.80"/>
-  <circle cx="250" cy="332" r="5" fill="#e8f8ff" fill-opacity="0.9"/>
+  <circle cx="600" cy="200" r="14" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="600" cy="200" r="5"  fill="#5bc2fc" fill-opacity="0.80" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="600" cy="200" r="2"  fill="rgba(200,240,255,0.85)"/>
 
-  <!-- Venture C — center-left, medium-large: x=300, y=345 (older, bigger) -->
-  <ellipse cx="300" cy="348" rx="65" ry="65" fill="url(#glowVenture3)"/>
-  <circle cx="300" cy="348" r="38" fill="none" stroke="#5bc2fc" stroke-width="1.4" stroke-opacity="0.44"/>
-  <circle cx="300" cy="348" r="26" fill="#5bc2fc" fill-opacity="0.14" stroke="#5bc2fc" stroke-width="2.2"/>
-  <circle cx="300" cy="348" r="15" fill="#5bc2fc" fill-opacity="0.82"/>
-  <circle cx="300" cy="348" r="6" fill="#e8f8ff" fill-opacity="0.9"/>
+  <!-- ── LEAF NODES (level 4 — azure, smaller) ───────────────────── -->
+  <circle cx="155" cy="130" r="12" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="155" cy="130" r="4.5" fill="#5bc2fc" fill-opacity="0.75" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <circle cx="155" cy="130" r="1.5" fill="rgba(200,240,255,0.8)"/>
 
-  <!-- Venture D — CENTER, largest: x=400, y=360 (primary growth) -->
-  <ellipse cx="400" cy="365" rx="80" ry="80" fill="url(#glowVenture4)" filter="url(#softGlow)"/>
-  <circle cx="400" cy="365" r="46" fill="none" stroke="#5bc2fc" stroke-width="1.8" stroke-opacity="0.50"/>
-  <circle cx="400" cy="365" r="33" fill="#5bc2fc" fill-opacity="0.16" stroke="#5bc2fc" stroke-width="2.5"/>
-  <circle cx="400" cy="365" r="20" fill="#5bc2fc" fill-opacity="0.85"/>
-  <circle cx="400" cy="365" r="8" fill="#e8f8ff" fill-opacity="0.95"/>
+  <circle cx="242" cy="122" r="10" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="242" cy="122" r="4"  fill="#5bc2fc" fill-opacity="0.70" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
 
-  <!-- Venture E — center-right, medium-large: x=500, y=345 -->
-  <ellipse cx="500" cy="348" rx="65" ry="65" fill="url(#glowVenture3)"/>
-  <circle cx="500" cy="348" r="38" fill="none" stroke="#5bc2fc" stroke-width="1.4" stroke-opacity="0.44"/>
-  <circle cx="500" cy="348" r="26" fill="#5bc2fc" fill-opacity="0.14" stroke="#5bc2fc" stroke-width="2.2"/>
-  <circle cx="500" cy="348" r="15" fill="#5bc2fc" fill-opacity="0.82"/>
-  <circle cx="500" cy="348" r="6" fill="#e8f8ff" fill-opacity="0.9"/>
+  <circle cx="310" cy="120" r="10" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="310" cy="120" r="4"  fill="#5bc2fc" fill-opacity="0.70"/>
 
-  <!-- Venture F — right-center, medium: x=560, y=332 -->
-  <ellipse cx="560" cy="332" rx="58" ry="58" fill="url(#glowVenture2)"/>
-  <circle cx="560" cy="332" r="34" fill="none" stroke="#5bc2fc" stroke-width="1.3" stroke-opacity="0.42"/>
-  <circle cx="560" cy="332" r="24" fill="#5bc2fc" fill-opacity="0.13" stroke="#5bc2fc" stroke-width="2"/>
-  <circle cx="560" cy="332" r="13" fill="#5bc2fc" fill-opacity="0.80"/>
-  <circle cx="560" cy="332" r="5" fill="#e8f8ff" fill-opacity="0.9"/>
+  <circle cx="368" cy="112" r="9"  fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="368" cy="112" r="3.5" fill="#5bc2fc" fill-opacity="0.65"/>
 
-  <!-- Venture G — rightmost, small-medium: x=670, y=310 -->
-  <ellipse cx="670" cy="310" rx="50" ry="50" fill="url(#glowVenture1)"/>
-  <circle cx="670" cy="310" r="28" fill="none" stroke="#5bc2fc" stroke-width="1.2" stroke-opacity="0.40"/>
-  <circle cx="670" cy="310" r="20" fill="#5bc2fc" fill-opacity="0.12" stroke="#5bc2fc" stroke-width="1.8"/>
-  <circle cx="670" cy="310" r="10" fill="#5bc2fc" fill-opacity="0.75"/>
-  <circle cx="670" cy="310" r="4" fill="#e8f8ff" fill-opacity="0.9"/>
+  <circle cx="432" cy="115" r="9"  fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="432" cy="115" r="3.5" fill="#5bc2fc" fill-opacity="0.65"/>
 
-  <!-- ========== LABELS ========== -->
+  <circle cx="488" cy="115" r="10" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="488" cy="115" r="4"  fill="#5bc2fc" fill-opacity="0.70"/>
 
-  <!-- Angel labels -->
-  <text x="180" y="158" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="0.08em" fill="#da980e" fill-opacity="0.75">BUSINESS ANGEL</text>
+  <circle cx="558" cy="130" r="10" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="558" cy="130" r="4"  fill="#5bc2fc" fill-opacity="0.70" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
 
-  <text x="400" y="145" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" letter-spacing="0.09em" fill="#f0b030" fill-opacity="0.85">LEAD ANGEL</text>
+  <circle cx="645" cy="130" r="12" fill="url(#i4-g-blue)" filter="url(#i4-micro)"/>
+  <circle cx="645" cy="130" r="4.5" fill="#5bc2fc" fill-opacity="0.75" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <circle cx="645" cy="130" r="1.5" fill="rgba(200,240,255,0.8)"/>
 
-  <text x="620" y="158" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="0.08em" fill="#da980e" fill-opacity="0.75">BUSINESS ANGEL</text>
+  <!-- ── LEVEL 5 MICRO-TIPS (faint, highest level) ──────────────── -->
+  <line x1="155" y1="130" x2="120" y2="75"  stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="155" y1="130" x2="178" y2="68"  stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="368" y1="112" x2="352" y2="58"  stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.22"/>
+  <line x1="368" y1="112" x2="398" y2="52"  stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.20"/>
+  <line x1="432" y1="115" x2="402" y2="54"  stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.20"/>
+  <line x1="432" y1="115" x2="450" y2="60"  stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.18"/>
+  <line x1="645" y1="130" x2="622" y2="72"  stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.24"/>
+  <line x1="645" y1="130" x2="672" y2="74"  stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.20"/>
 
-  <!-- Tier label: capital flows down -->
-  <text x="400" y="205" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" font-weight="400" letter-spacing="0.12em" fill="rgba(255,255,255,0.22)">CAPITALE · MENTORSHIP · NETWORK</text>
+  <!-- Micro tip dots -->
+  <circle cx="120" cy="75"  r="2.5" fill="#5bc2fc" fill-opacity="0.50"/>
+  <circle cx="178" cy="68"  r="2"   fill="#5bc2fc" fill-opacity="0.42"/>
+  <circle cx="352" cy="58"  r="2"   fill="#5bc2fc" fill-opacity="0.42"/>
+  <circle cx="398" cy="52"  r="2.5" fill="#5bc2fc" fill-opacity="0.48"/>
+  <circle cx="402" cy="54"  r="2"   fill="#5bc2fc" fill-opacity="0.42"/>
+  <circle cx="450" cy="60"  r="2"   fill="#5bc2fc" fill-opacity="0.40"/>
+  <circle cx="622" cy="72"  r="2.5" fill="#5bc2fc" fill-opacity="0.46"/>
+  <circle cx="672" cy="74"  r="2"   fill="#5bc2fc" fill-opacity="0.38"/>
 
-  <!-- Venture labels -->
-  <text x="120" y="350" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" font-weight="500" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.65">SEED</text>
-  <text x="250" y="378" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="500" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.70">EARLY</text>
-  <text x="300" y="398" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.75">SCALE UP</text>
-  <text x="400" y="423" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="700" letter-spacing="0.09em" fill="#5bc2fc" fill-opacity="0.85">VENTURE</text>
-  <text x="500" y="398" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.75">SCALE UP</text>
-  <text x="560" y="378" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="500" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.70">EARLY</text>
-  <text x="670" y="350" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" font-weight="500" letter-spacing="0.08em" fill="#5bc2fc" fill-opacity="0.65">SEED</text>
-
-  <!-- Section title -->
-  <text x="400" y="466" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="400" letter-spacing="0.18em" fill="rgba(255,255,255,0.28)">04 · BUSINESS ANGEL</text>
+  <!-- Ambient particles -->
+  <circle cx="95"  cy="340" r="1.5" fill="#da980e" fill-opacity="0.20"/>
+  <circle cx="710" cy="360" r="1.5" fill="#da980e" fill-opacity="0.18"/>
+  <circle cx="130" cy="420" r="1.2" fill="#da980e" fill-opacity="0.16"/>
+  <circle cx="680" cy="420" r="1.2" fill="#da980e" fill-opacity="0.15"/>
+  <circle cx="60"  cy="250" r="1.5" fill="#5bc2fc" fill-opacity="0.14"/>
+  <circle cx="740" cy="250" r="1.5" fill="#5bc2fc" fill-opacity="0.14"/>
 </svg>

@@ -1,99 +1,134 @@
-<svg viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="bg2" cx="25%" cy="50%" r="40%"><stop offset="0%" stop-color="#0f0830"/><stop offset="100%" stop-color="#040315"/></radialGradient>
-    <radialGradient id="bg2r" cx="75%" cy="50%" r="40%"><stop offset="0%" stop-color="#0a1e35"/><stop offset="100%" stop-color="#040315"/></radialGradient>
-    <linearGradient id="tr2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6c20d2" stop-opacity="0.18"/><stop offset="50%" stop-color="#3a0f60" stop-opacity="0.06"/><stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.18"/></linearGradient>
-    <radialGradient id="rg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.22"/><stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/></radialGradient>
-    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(232,228,220,0.35)"/></marker>
+    <linearGradient id="i2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#040315"/>
+      <stop offset="100%" stop-color="#07041f"/>
+    </linearGradient>
+    <linearGradient id="i2-flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#6c20d2" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#6c20d2" stop-opacity="0.7"/>
+      <stop offset="65%"  stop-color="#5bc2fc" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="i2-flow2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#d21c82" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#d21c82" stop-opacity="0.5"/>
+      <stop offset="60%"  stop-color="#5bc2fc" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="i2-node-l" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6c20d2" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6c20d2" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="i2-node-r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="i2-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="i2-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <pattern id="i2-dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="0.8" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
   </defs>
-  <rect width="800" height="500" fill="#040315"/>
-  <rect width="800" height="500" fill="url(#bg2)"/>
-  <rect width="800" height="500" fill="url(#bg2r)"/>
-  <!-- Transition zone -->
-  <rect x="300" y="0" width="200" height="500" fill="url(#tr2)"/>
-  <!-- Divider line -->
-  <line x1="400" y1="0" x2="400" y2="500" stroke="rgba(232,228,220,0.06)" stroke-width="1"/>
 
-  <!-- LEFT: Linear/hierarchical model (old) -->
-  <!-- Boxes -->
-  <g fill="rgba(108,32,210,0.10)" stroke="rgba(108,32,210,0.35)" stroke-width="0.7">
-    <rect x="108" y="68" width="164" height="46" rx="2"/>
-    <rect x="108" y="178" width="164" height="46" rx="2"/>
-    <rect x="108" y="288" width="164" height="46" rx="2"/>
-    <rect x="108" y="398" width="164" height="46" rx="2"/>
-  </g>
-  <!-- Box labels -->
-  <g font-family="monospace" font-size="8" fill="rgba(232,228,220,0.38)" letter-spacing="0.10em" text-anchor="middle">
-    <text x="190" y="96">IDEA</text>
-    <text x="190" y="206">PLANNING</text>
-    <text x="190" y="316">EXECUTION</text>
-    <text x="190" y="426">OUTPUT</text>
-  </g>
-  <!-- Connecting arrows down -->
-  <g stroke="rgba(108,32,210,0.5)" stroke-width="0.8" fill="none" marker-end="url(#arr)">
-    <line x1="190" y1="114" x2="190" y2="174"/>
-    <line x1="190" y1="224" x2="190" y2="284"/>
-    <line x1="190" y1="334" x2="190" y2="394"/>
-  </g>
-  <!-- Side branches (linear rigidity) -->
-  <g stroke="rgba(108,32,210,0.2)" stroke-width="0.5" fill="none">
-    <line x1="108" y1="91" x2="58" y2="91"/><circle cx="52" cy="91" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="108" y1="201" x2="58" y2="201"/><circle cx="52" cy="201" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="108" y1="311" x2="58" y2="311"/><circle cx="52" cy="311" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="108" y1="421" x2="58" y2="421"/><circle cx="52" cy="421" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="272" y1="91" x2="322" y2="91"/><circle cx="328" cy="91" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="272" y1="201" x2="322" y2="201"/><circle cx="328" cy="201" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="272" y1="311" x2="322" y2="311"/><circle cx="328" cy="311" r="2.5" fill="rgba(108,32,210,0.35)"/>
-    <line x1="272" y1="421" x2="322" y2="421"/><circle cx="328" cy="421" r="2.5" fill="rgba(108,32,210,0.35)"/>
-  </g>
-  <!-- Linear label -->
-  <text x="190" y="490" font-family="monospace" font-size="7.5" fill="rgba(232,228,220,0.22)" letter-spacing="0.14em" text-anchor="middle">SEQUENTIAL MODEL</text>
+  <rect width="800" height="500" fill="url(#i2-bg)"/>
+  <rect width="800" height="500" fill="url(#i2-dots)"/>
 
-  <!-- CENTER: Transformation particles + arrow -->
-  <g fill="#5bc2fc" opacity="0.22">
-    <circle cx="340" cy="140" r="1.5"/><circle cx="360" cy="190" r="1.5"/><circle cx="380" cy="250" r="2"/>
-    <circle cx="360" cy="310" r="1.5"/><circle cx="340" cy="360" r="1.5"/>
-    <circle cx="420" cy="140" r="1.5"/><circle cx="440" cy="190" r="1.5"/>
-    <circle cx="420" cy="310" r="1.5"/><circle cx="440" cy="360" r="1.5"/>
-  </g>
-  <line x1="350" y1="250" x2="450" y2="250" stroke="rgba(232,228,220,0.25)" stroke-width="0.8" stroke-dasharray="4,6"/>
+  <!-- Central axis line -->
+  <line x1="60" y1="250" x2="740" y2="250" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
 
-  <!-- RIGHT: Networked/circular model (new) -->
-  <ellipse cx="610" cy="250" rx="110" ry="105" fill="url(#rg2)"/>
-  <!-- Circular ring -->
-  <circle cx="610" cy="250" r="96" fill="none" stroke="#5bc2fc" stroke-width="0.5" opacity="0.16"/>
-  <!-- Hub → nodes -->
-  <g stroke="#5bc2fc" stroke-width="0.7" opacity="0.28" fill="none">
-    <line x1="610" y1="250" x2="610" y2="120"/><line x1="610" y1="250" x2="706" y2="175"/>
-    <line x1="610" y1="250" x2="706" y2="325"/><line x1="610" y1="250" x2="610" y2="380"/>
-    <line x1="610" y1="250" x2="514" y2="325"/><line x1="610" y1="250" x2="514" y2="175"/>
-  </g>
-  <!-- Ring connections -->
-  <polygon points="610,120 706,175 706,325 610,380 514,325 514,175" fill="none" stroke="#5bc2fc" stroke-width="0.45" opacity="0.18"/>
-  <!-- Cross connections -->
-  <g stroke="#5bc2fc" stroke-width="0.35" opacity="0.1" fill="none">
-    <line x1="610" y1="120" x2="706" y2="325"/><line x1="706" y1="175" x2="514" y2="325"/>
-    <line x1="706" y1="325" x2="514" y2="175"/><line x1="514" y1="325" x2="610" y2="120"/>
-  </g>
-  <!-- Hub center -->
-  <circle cx="610" cy="250" r="18" fill="#5bc2fc" opacity="0.10"/>
-  <circle cx="610" cy="250" r="6.5" fill="#5bc2fc"/>
-  <circle cx="610" cy="250" r="3" fill="rgba(232,228,220,0.96)"/>
-  <!-- Ring nodes -->
-  <g>
-    <circle cx="610" cy="120" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="610" cy="120" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="610" cy="120" r="2.2" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="706" cy="175" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="706" cy="175" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="706" cy="175" r="2.2" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="706" cy="325" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="706" cy="325" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="706" cy="325" r="2.2" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="610" cy="380" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="610" cy="380" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="610" cy="380" r="2.2" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="514" cy="325" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="514" cy="325" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="514" cy="325" r="2.2" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="514" cy="175" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="514" cy="175" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="514" cy="175" r="2.2" fill="rgba(232,228,220,0.9)"/>
-  </g>
-  <!-- Node labels right side -->
-  <g font-family="monospace" font-size="8" fill="rgba(232,228,220,0.30)" letter-spacing="0.10em" text-anchor="middle">
-    <text x="610" y="100">IDEA</text><text x="738" y="168">PLANNING</text>
-    <text x="738" y="338">EXECUTION</text><text x="610" y="408">OUTPUT</text>
-    <text x="482" y="338">DATA</text><text x="480" y="168">CULTURE</text>
-    <text x="610" y="274">SYSTEM</text>
-  </g>
-  <text x="610" y="490" font-family="monospace" font-size="7.5" fill="rgba(232,228,220,0.22)" letter-spacing="0.14em" text-anchor="middle">SYSTEMIC MODEL</text>
+  <!-- Left cluster: scattered irregular nodes (chaos/input) -->
+  <!-- Large violet glow -->
+  <circle cx="160" cy="250" r="70" fill="#6c20d2" fill-opacity="0.06" filter="url(#i2-blur)"/>
+
+  <!-- Scattered dots left side -->
+  <circle cx="90"  cy="148" r="4" fill="#6c20d2" fill-opacity="0.60" stroke="#9b6de8" stroke-width="0.8"/>
+  <circle cx="128" cy="205" r="5" fill="#6c20d2" fill-opacity="0.70" stroke="#9b6de8" stroke-width="1"/>
+  <circle cx="75"  cy="265" r="3" fill="#6c20d2" fill-opacity="0.55"/>
+  <circle cx="155" cy="178" r="6" fill="#6c20d2" fill-opacity="0.75" stroke="#9b6de8" stroke-width="1.2"/>
+  <circle cx="100" cy="315" r="4" fill="#6c20d2" fill-opacity="0.58"/>
+  <circle cx="170" cy="305" r="5" fill="#6c20d2" fill-opacity="0.68" stroke="#9b6de8" stroke-width="0.8"/>
+  <circle cx="130" cy="360" r="3.5" fill="#6c20d2" fill-opacity="0.52"/>
+  <circle cx="195" cy="238" r="7" fill="#6c20d2" fill-opacity="0.80" stroke="#9b6de8" stroke-width="1.5"/>
+  <circle cx="75"  cy="390" r="3" fill="#6c20d2" fill-opacity="0.42"/>
+  <circle cx="200" cy="130" r="4" fill="#6c20d2" fill-opacity="0.55"/>
+  <circle cx="115" cy="430" r="2.5" fill="#6c20d2" fill-opacity="0.38"/>
+
+  <!-- Loose connector lines (left cluster internal) -->
+  <line x1="128" y1="205" x2="155" y2="178" stroke="#6c20d2" stroke-width="0.7" stroke-opacity="0.35"/>
+  <line x1="155" y1="178" x2="195" y2="238" stroke="#6c20d2" stroke-width="0.8" stroke-opacity="0.38"/>
+  <line x1="195" y1="238" x2="170" y2="305" stroke="#6c20d2" stroke-width="0.7" stroke-opacity="0.32"/>
+  <line x1="128" y1="205" x2="75"  y2="265" stroke="#6c20d2" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="90"  cy="148" x2="128" y2="205" stroke="#6c20d2" stroke-width="0.5" stroke-opacity="0.22"/>
+  <line x1="170" y1="305" x2="100" y2="315" stroke="#6c20d2" stroke-width="0.5" stroke-opacity="0.22"/>
+
+  <!-- Flowing streams (left → center → right) -->
+  <!-- Stream 1 — upper -->
+  <path d="M 220,155 C 300,155 320,200 400,200 C 480,200 500,168 580,168"
+        fill="none" stroke="url(#i2-flow)" stroke-width="1.4" stroke-opacity="0.7"/>
+  <!-- Stream 2 — main upper -->
+  <path d="M 220,200 C 290,200 310,228 400,228 C 490,228 510,215 580,215"
+        fill="none" stroke="url(#i2-flow)" stroke-width="2.0" stroke-opacity="0.8"/>
+  <!-- Stream 3 — central -->
+  <path d="M 220,250 C 300,250 350,250 400,250 C 450,250 500,250 580,250"
+        fill="none" stroke="url(#i2-flow)" stroke-width="2.6" stroke-opacity="0.85"/>
+  <!-- Stream 4 — main lower -->
+  <path d="M 220,300 C 290,300 310,272 400,272 C 490,272 510,285 580,285"
+        fill="none" stroke="url(#i2-flow)" stroke-width="2.0" stroke-opacity="0.8"/>
+  <!-- Stream 5 — lower -->
+  <path d="M 220,345 C 300,345 320,300 400,300 C 480,300 500,332 580,332"
+        fill="none" stroke="url(#i2-flow)" stroke-width="1.4" stroke-opacity="0.7"/>
+
+  <!-- Faint extra streams -->
+  <path d="M 220,130 C 310,130 330,185 400,185 C 470,185 490,152 580,152"
+        fill="none" stroke="url(#i2-flow2)" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M 220,370 C 310,370 330,315 400,315 C 470,315 490,348 580,348"
+        fill="none" stroke="url(#i2-flow2)" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Central convergence point glow -->
+  <circle cx="400" cy="250" r="45" fill="#5bc2fc" fill-opacity="0.04" filter="url(#i2-blur)"/>
+  <circle cx="400" cy="250" r="22" fill="none" stroke="#5bc2fc" stroke-width="0.8" stroke-opacity="0.22" stroke-dasharray="3 6"/>
+  <circle cx="400" cy="250" r="7"  fill="#5bc2fc" fill-opacity="0.60"/>
+  <circle cx="400" cy="250" r="3"  fill="rgba(200,240,255,0.9)"/>
+
+  <!-- Right cluster: ordered grid nodes (structure/output) -->
+  <!-- Azure glow -->
+  <circle cx="640" cy="250" r="70" fill="#5bc2fc" fill-opacity="0.05" filter="url(#i2-blur)"/>
+
+  <!-- Grid nodes right side: 4×5 arrangement, tighter, more ordered -->
+  <!-- Column x=600 -->
+  <circle cx="600" cy="170" r="4" fill="#5bc2fc" fill-opacity="0.65" stroke="rgba(140,210,255,0.5)" stroke-width="0.8"/>
+  <circle cx="600" cy="210" r="5" fill="#5bc2fc" fill-opacity="0.75" stroke="rgba(140,210,255,0.6)" stroke-width="1"/>
+  <circle cx="600" cy="250" r="6" fill="#5bc2fc" fill-opacity="0.85" stroke="rgba(140,210,255,0.7)" stroke-width="1.2"/>
+  <circle cx="600" cy="290" r="5" fill="#5bc2fc" fill-opacity="0.75" stroke="rgba(140,210,255,0.6)" stroke-width="1"/>
+  <circle cx="600" cy="330" r="4" fill="#5bc2fc" fill-opacity="0.65" stroke="rgba(140,210,255,0.5)" stroke-width="0.8"/>
+  <!-- Column x=648 -->
+  <circle cx="648" cy="170" r="4" fill="#5bc2fc" fill-opacity="0.60" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <circle cx="648" cy="210" r="5" fill="#5bc2fc" fill-opacity="0.70" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="648" cy="250" r="6" fill="#5bc2fc" fill-opacity="0.80" stroke="rgba(140,210,255,0.6)" stroke-width="1.2"/>
+  <circle cx="648" cy="290" r="5" fill="#5bc2fc" fill-opacity="0.70" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="648" cy="330" r="4" fill="#5bc2fc" fill-opacity="0.60" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <!-- Column x=696 -->
+  <circle cx="696" cy="190" r="3.5" fill="#5bc2fc" fill-opacity="0.55"/>
+  <circle cx="696" cy="230" r="4.5" fill="#5bc2fc" fill-opacity="0.65" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <circle cx="696" cy="250" r="5" fill="#5bc2fc" fill-opacity="0.72" stroke="rgba(140,210,255,0.5)" stroke-width="1"/>
+  <circle cx="696" cy="270" r="4.5" fill="#5bc2fc" fill-opacity="0.65" stroke="rgba(140,210,255,0.4)" stroke-width="0.8"/>
+  <circle cx="696" cy="310" r="3.5" fill="#5bc2fc" fill-opacity="0.55"/>
+
+  <!-- Grid connectors right (horizontal + vertical) -->
+  <line x1="600" y1="170" x2="648" y2="170" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.30"/>
+  <line x1="600" y1="210" x2="648" y2="210" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.32"/>
+  <line x1="600" y1="250" x2="648" y2="250" stroke="#5bc2fc" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="600" y1="290" x2="648" y2="290" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.32"/>
+  <line x1="600" y1="330" x2="648" y2="330" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="648" y1="230" x2="696" y2="230" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.25"/>
+  <line x1="648" y1="250" x2="696" y2="250" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.28"/>
+  <line x1="648" y1="270" x2="696" y2="270" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.25"/>
+  <!-- Verticals -->
+  <line x1="600" y1="170" x2="600" y2="330" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.22"/>
+  <line x1="648" y1="170" x2="648" y2="330" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.22"/>
 </svg>

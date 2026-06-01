@@ -1,109 +1,156 @@
-<svg viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="bg3" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#08102a"/><stop offset="100%" stop-color="#040315"/></radialGradient>
-    <radialGradient id="ga3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#d21c82" stop-opacity="0.20"/><stop offset="100%" stop-color="#d21c82" stop-opacity="0"/></radialGradient>
-    <radialGradient id="gb3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.20"/><stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/></radialGradient>
-    <radialGradient id="gc3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#6c20d2" stop-opacity="0.20"/><stop offset="100%" stop-color="#6c20d2" stop-opacity="0"/></radialGradient>
-    <radialGradient id="gd3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#da980e" stop-opacity="0.18"/><stop offset="100%" stop-color="#da980e" stop-opacity="0"/></radialGradient>
+    <radialGradient id="i3-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#060520"/>
+      <stop offset="100%" stop-color="#040315"/>
+    </radialGradient>
+    <radialGradient id="i3-g-pink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d21c82" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d21c82" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3-g-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3-g-vio" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6c20d2" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#6c20d2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3-g-gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(232,228,220,0.9)" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="rgba(232,228,220,0)" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="i3-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="i3-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="i3-micro" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <pattern id="i3-dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="22" cy="22" r="0.7" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
   </defs>
-  <rect width="800" height="500" fill="url(#bg3)"/>
 
-  <!-- Cluster glows -->
-  <ellipse cx="175" cy="140" rx="130" ry="110" fill="url(#ga3)"/>
-  <ellipse cx="625" cy="140" rx="130" ry="110" fill="url(#gb3)"/>
-  <ellipse cx="175" cy="370" rx="130" ry="110" fill="url(#gc3)"/>
-  <ellipse cx="625" cy="370" rx="130" ry="110" fill="url(#gd3)"/>
+  <rect width="800" height="500" fill="url(#i3-bg)"/>
+  <rect width="800" height="500" fill="url(#i3-dots)"/>
 
-  <!-- Inter-cluster bridge lines -->
-  <g stroke="rgba(232,228,220,0.5)" stroke-width="0.5" opacity="0.12" fill="none" stroke-dasharray="4,10">
-    <line x1="248" y1="140" x2="395" y2="250"/><line x1="552" y1="140" x2="405" y2="250"/>
-    <line x1="248" y1="370" x2="395" y2="250"/><line x1="552" y1="370" x2="405" y2="250"/>
-    <line x1="248" y1="140" x2="552" y2="140"/><line x1="248" y1="370" x2="552" y2="370"/>
-    <line x1="175" y1="240" x2="175" y2="270"/><line x1="625" y1="240" x2="625" y2="270"/>
-  </g>
+  <!-- ── CLUSTER A: top-left — fuchsia ─────────────────────────────────── -->
+  <!-- Cluster glow -->
+  <circle cx="185" cy="135" r="85" fill="url(#i3-g-pink)" filter="url(#i3-glow)"/>
+  <!-- Intra-cluster lines -->
+  <line x1="128" y1="88"  x2="185" y2="115" stroke="#d21c82" stroke-width="0.7" stroke-opacity="0.35"/>
+  <line x1="185" y1="115" x2="230" y2="95"  stroke="#d21c82" stroke-width="0.7" stroke-opacity="0.32"/>
+  <line x1="185" y1="115" x2="148" y2="158" stroke="#d21c82" stroke-width="0.7" stroke-opacity="0.30"/>
+  <line x1="148" y1="158" x2="210" y2="170" stroke="#d21c82" stroke-width="0.6" stroke-opacity="0.25"/>
+  <line x1="230" y1="95"  x2="248" y2="145" stroke="#d21c82" stroke-width="0.6" stroke-opacity="0.25"/>
+  <line x1="248" y1="145" x2="210" y2="170" stroke="#d21c82" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="105" y1="130" x2="148" y2="158" stroke="#d21c82" stroke-width="0.5" stroke-opacity="0.22"/>
+  <line x1="128" y1="88"  x2="105" y2="130" stroke="#d21c82" stroke-width="0.5" stroke-opacity="0.20"/>
+  <!-- Cluster nodes -->
+  <circle cx="185" cy="115" r="9" fill="#d21c82" fill-opacity="0.90" stroke="rgba(255,100,180,0.5)" stroke-width="1.5"/>
+  <circle cx="128" cy="88"  r="6" fill="#d21c82" fill-opacity="0.75" stroke="rgba(255,100,180,0.4)" stroke-width="1"/>
+  <circle cx="230" cy="95"  r="6" fill="#d21c82" fill-opacity="0.72" stroke="rgba(255,100,180,0.4)" stroke-width="1"/>
+  <circle cx="105" cy="130" r="4.5" fill="#d21c82" fill-opacity="0.60"/>
+  <circle cx="148" cy="158" r="6" fill="#d21c82" fill-opacity="0.70" stroke="rgba(255,100,180,0.3)" stroke-width="0.8"/>
+  <circle cx="248" cy="145" r="5" fill="#d21c82" fill-opacity="0.65"/>
+  <circle cx="210" cy="170" r="4.5" fill="#d21c82" fill-opacity="0.58"/>
+  <circle cx="160" cy="70"  r="3.5" fill="#d21c82" fill-opacity="0.48"/>
+  <circle cx="270" cy="80"  r="3" fill="#d21c82" fill-opacity="0.40"/>
 
-  <!-- CLUSTER A — Fuchsia — top-left (Fashion/Luxury) -->
-  <g stroke="#d21c82" fill="#d21c82">
-    <!-- Internal lines -->
-    <g stroke-width="0.5" opacity="0.22" fill="none">
-      <line x1="145" y1="100" x2="210" y2="80"/><line x1="145" y1="100" x2="220" y2="150"/>
-      <line x1="145" y1="100" x2="155" y2="170"/><line x1="145" y1="100" x2="88" y2="155"/>
-      <line x1="145" y1="100" x2="76" y2="105"/><line x1="210" y1="80" x2="220" y2="150"/>
-      <line x1="220" y1="150" x2="155" y2="170"/><line x1="88" y1="155" x2="76" y2="105"/>
-    </g>
-    <!-- Nodes -->
-    <circle cx="145" cy="100" r="7" opacity="0.9"/><circle cx="145" cy="100" r="3" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="210" cy="80" r="4" opacity="0.75"/><circle cx="220" cy="150" r="4" opacity="0.75"/>
-    <circle cx="155" cy="170" r="3.5" opacity="0.65"/><circle cx="88" cy="155" r="3.5" opacity="0.65"/>
-    <circle cx="76" cy="105" r="3" opacity="0.55"/><circle cx="248" cy="110" r="2.5" opacity="0.45"/>
-    <circle cx="108" cy="62" r="2.5" opacity="0.40"/>
-  </g>
+  <!-- ── CLUSTER B: top-right — azure ──────────────────────────────────── -->
+  <circle cx="615" cy="135" r="85" fill="url(#i3-g-blue)" filter="url(#i3-glow)"/>
+  <!-- Lines -->
+  <line x1="570" y1="88"  x2="615" y2="115" stroke="#5bc2fc" stroke-width="0.7" stroke-opacity="0.35"/>
+  <line x1="615" y1="115" x2="665" y2="92"  stroke="#5bc2fc" stroke-width="0.7" stroke-opacity="0.32"/>
+  <line x1="615" y1="115" x2="582" y2="158" stroke="#5bc2fc" stroke-width="0.7" stroke-opacity="0.30"/>
+  <line x1="582" y1="158" x2="638" y2="172" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.26"/>
+  <line x1="665" y1="92"  x2="685" y2="140" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.24"/>
+  <line x1="685" y1="140" x2="648" y2="172" stroke="#5bc2fc" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="550" y1="128" x2="582" y2="158" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.20"/>
+  <line x1="570" y1="88"  x2="550" y2="128" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.18"/>
+  <!-- Nodes -->
+  <circle cx="615" cy="115" r="9" fill="#5bc2fc" fill-opacity="0.90" stroke="rgba(160,220,255,0.5)" stroke-width="1.5"/>
+  <circle cx="570" cy="88"  r="6" fill="#5bc2fc" fill-opacity="0.75" stroke="rgba(160,220,255,0.4)" stroke-width="1"/>
+  <circle cx="665" cy="92"  r="6" fill="#5bc2fc" fill-opacity="0.72" stroke="rgba(160,220,255,0.4)" stroke-width="1"/>
+  <circle cx="550" cy="128" r="4.5" fill="#5bc2fc" fill-opacity="0.60"/>
+  <circle cx="582" cy="158" r="6" fill="#5bc2fc" fill-opacity="0.70" stroke="rgba(160,220,255,0.3)" stroke-width="0.8"/>
+  <circle cx="685" cy="140" r="5" fill="#5bc2fc" fill-opacity="0.65"/>
+  <circle cx="638" cy="172" r="4.5" fill="#5bc2fc" fill-opacity="0.58"/>
+  <circle cx="700" cy="95"  r="3.5" fill="#5bc2fc" fill-opacity="0.45"/>
 
-  <!-- CLUSTER B — Azure — top-right (Media/Entertainment) -->
-  <g stroke="#5bc2fc" fill="#5bc2fc">
-    <g stroke-width="0.5" opacity="0.22" fill="none">
-      <line x1="650" y1="100" x2="590" y2="78"/><line x1="650" y1="100" x2="580" y2="148"/>
-      <line x1="650" y1="100" x2="648" y2="168"/><line x1="650" y1="100" x2="712" y2="145"/>
-      <line x1="650" y1="100" x2="724" y2="98"/><line x1="590" y1="78" x2="580" y2="148"/>
-      <line x1="712" y1="145" x2="724" y2="98"/>
-    </g>
-    <circle cx="650" cy="100" r="7" opacity="0.9"/><circle cx="650" cy="100" r="3" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="590" cy="78" r="4" opacity="0.75"/><circle cx="580" cy="148" r="4" opacity="0.75"/>
-    <circle cx="648" cy="168" r="3.5" opacity="0.65"/><circle cx="712" cy="145" r="3.5" opacity="0.65"/>
-    <circle cx="724" cy="98" r="3" opacity="0.55"/><circle cx="552" cy="108" r="2.5" opacity="0.45"/>
-    <circle cx="690" cy="62" r="2.5" opacity="0.40"/>
-  </g>
+  <!-- ── CLUSTER C: bottom-left — violet ───────────────────────────────── -->
+  <circle cx="185" cy="365" r="85" fill="url(#i3-g-vio)" filter="url(#i3-glow)"/>
+  <!-- Lines -->
+  <line x1="148" y1="328" x2="185" y2="355" stroke="#6c20d2" stroke-width="0.7" stroke-opacity="0.35"/>
+  <line x1="185" y1="355" x2="235" y2="338" stroke="#6c20d2" stroke-width="0.7" stroke-opacity="0.32"/>
+  <line x1="185" y1="355" x2="158" y2="395" stroke="#6c20d2" stroke-width="0.7" stroke-opacity="0.28"/>
+  <line x1="158" y1="395" x2="218" y2="408" stroke="#6c20d2" stroke-width="0.6" stroke-opacity="0.24"/>
+  <line x1="235" y1="338" x2="255" y2="382" stroke="#6c20d2" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="255" y1="382" x2="218" y2="408" stroke="#6c20d2" stroke-width="0.6" stroke-opacity="0.20"/>
+  <line x1="112" y1="368" x2="148" y2="328" stroke="#6c20d2" stroke-width="0.5" stroke-opacity="0.20"/>
+  <line x1="112" y1="368" x2="158" y2="395" stroke="#6c20d2" stroke-width="0.5" stroke-opacity="0.18"/>
+  <!-- Nodes -->
+  <circle cx="185" cy="355" r="9" fill="#6c20d2" fill-opacity="0.90" stroke="rgba(160,100,255,0.5)" stroke-width="1.5"/>
+  <circle cx="148" cy="328" r="6" fill="#6c20d2" fill-opacity="0.72" stroke="rgba(160,100,255,0.4)" stroke-width="1"/>
+  <circle cx="235" cy="338" r="6" fill="#6c20d2" fill-opacity="0.70" stroke="rgba(160,100,255,0.4)" stroke-width="1"/>
+  <circle cx="112" cy="368" r="4.5" fill="#6c20d2" fill-opacity="0.58"/>
+  <circle cx="158" cy="395" r="6" fill="#6c20d2" fill-opacity="0.68"/>
+  <circle cx="255" cy="382" r="5" fill="#6c20d2" fill-opacity="0.62"/>
+  <circle cx="218" cy="408" r="4.5" fill="#6c20d2" fill-opacity="0.55"/>
+  <circle cx="175" cy="435" r="3.5" fill="#6c20d2" fill-opacity="0.42"/>
 
-  <!-- CLUSTER C — Violet — bottom-left (Industry/Corp) -->
-  <g stroke="#6c20d2" fill="#6c20d2">
-    <g stroke-width="0.5" opacity="0.22" fill="none">
-      <line x1="148" y1="400" x2="210" y2="420"/><line x1="148" y1="400" x2="220" y2="355"/>
-      <line x1="148" y1="400" x2="155" y2="330"/><line x1="148" y1="400" x2="88" y2="345"/>
-      <line x1="148" y1="400" x2="78" y2="398"/><line x1="210" y1="420" x2="220" y2="355"/>
-      <line x1="88" y1="345" x2="78" y2="398"/>
-    </g>
-    <circle cx="148" cy="400" r="7" opacity="0.9"/><circle cx="148" cy="400" r="3" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="210" cy="420" r="4" opacity="0.75"/><circle cx="220" cy="355" r="4" opacity="0.75"/>
-    <circle cx="155" cy="330" r="3.5" opacity="0.65"/><circle cx="88" cy="345" r="3.5" opacity="0.65"/>
-    <circle cx="78" cy="398" r="3" opacity="0.55"/><circle cx="248" cy="390" r="2.5" opacity="0.45"/>
-    <circle cx="108" cy="440" r="2.5" opacity="0.40"/>
-  </g>
+  <!-- ── CLUSTER D: bottom-right — gold ────────────────────────────────── -->
+  <circle cx="615" cy="365" r="85" fill="url(#i3-g-gold)" filter="url(#i3-glow)"/>
+  <!-- Lines -->
+  <line x1="575" y1="328" x2="615" y2="355" stroke="#da980e" stroke-width="0.7" stroke-opacity="0.35"/>
+  <line x1="615" y1="355" x2="660" y2="338" stroke="#da980e" stroke-width="0.7" stroke-opacity="0.32"/>
+  <line x1="615" y1="355" x2="588" y2="398" stroke="#da980e" stroke-width="0.7" stroke-opacity="0.28"/>
+  <line x1="588" y1="398" x2="645" y2="410" stroke="#da980e" stroke-width="0.6" stroke-opacity="0.24"/>
+  <line x1="660" y1="338" x2="678" y2="382" stroke="#da980e" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="678" y1="382" x2="645" y2="410" stroke="#da980e" stroke-width="0.6" stroke-opacity="0.20"/>
+  <line x1="548" y1="370" x2="575" y2="328" stroke="#da980e" stroke-width="0.5" stroke-opacity="0.20"/>
+  <line x1="548" y1="370" x2="588" y2="398" stroke="#da980e" stroke-width="0.5" stroke-opacity="0.18"/>
+  <!-- Nodes -->
+  <circle cx="615" cy="355" r="9" fill="#da980e" fill-opacity="0.90" stroke="rgba(255,200,80,0.5)" stroke-width="1.5"/>
+  <circle cx="575" cy="328" r="6" fill="#da980e" fill-opacity="0.72" stroke="rgba(255,200,80,0.4)" stroke-width="1"/>
+  <circle cx="660" cy="338" r="6" fill="#da980e" fill-opacity="0.70" stroke="rgba(255,200,80,0.4)" stroke-width="1"/>
+  <circle cx="548" cy="370" r="4.5" fill="#da980e" fill-opacity="0.58"/>
+  <circle cx="588" cy="398" r="6" fill="#da980e" fill-opacity="0.68"/>
+  <circle cx="678" cy="382" r="5" fill="#da980e" fill-opacity="0.62"/>
+  <circle cx="645" cy="410" r="4.5" fill="#da980e" fill-opacity="0.55"/>
+  <circle cx="700" cy="415" r="3" fill="#da980e" fill-opacity="0.40"/>
 
-  <!-- CLUSTER D — Gold — bottom-right (Lifestyle/Health) -->
-  <g stroke="#da980e" fill="#da980e">
-    <g stroke-width="0.5" opacity="0.22" fill="none">
-      <line x1="650" y1="400" x2="590" y2="422"/><line x1="650" y1="400" x2="580" y2="352"/>
-      <line x1="650" y1="400" x2="650" y2="330"/><line x1="650" y1="400" x2="714" y2="350"/>
-      <line x1="650" y1="400" x2="724" y2="402"/><line x1="590" y1="422" x2="580" y2="352"/>
-      <line x1="714" y1="350" x2="724" y2="402"/>
-    </g>
-    <circle cx="650" cy="400" r="7" opacity="0.9"/><circle cx="650" cy="400" r="3" fill="rgba(232,228,220,0.9)"/>
-    <circle cx="590" cy="422" r="4" opacity="0.75"/><circle cx="580" cy="352" r="4" opacity="0.75"/>
-    <circle cx="650" cy="330" r="3.5" opacity="0.65"/><circle cx="714" cy="350" r="3.5" opacity="0.65"/>
-    <circle cx="724" cy="402" r="3" opacity="0.55"/><circle cx="552" cy="392" r="2.5" opacity="0.45"/>
-    <circle cx="690" cy="440" r="2.5" opacity="0.40"/>
-  </g>
+  <!-- ── CROSS-CLUSTER BRIDGES (thin, subtle) ───────────────────────────── -->
+  <!-- A→B (horizontal top) -->
+  <line x1="248" y1="145" x2="550" y2="128" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" stroke-dasharray="3 8"/>
+  <!-- A→C (vertical left) -->
+  <line x1="105" y1="130" x2="112" y2="368" stroke="rgba(255,255,255,0.10)" stroke-width="0.5" stroke-dasharray="3 9"/>
+  <!-- B→D (vertical right) -->
+  <line x1="685" y1="140" x2="678" y2="382" stroke="rgba(255,255,255,0.10)" stroke-width="0.5" stroke-dasharray="3 9"/>
+  <!-- C→D (horizontal bottom) -->
+  <line x1="255" y1="382" x2="548" y2="370" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" stroke-dasharray="3 8"/>
+  <!-- Diagonal A→D -->
+  <line x1="210" y1="170" x2="588" y2="398" stroke="rgba(255,255,255,0.08)" stroke-width="0.4" stroke-dasharray="2 10"/>
+  <!-- Diagonal B→C -->
+  <line x1="582" y1="158" x2="218" y2="408" stroke="rgba(255,255,255,0.08)" stroke-width="0.4" stroke-dasharray="2 10"/>
 
-  <!-- CENTRAL HUB — white -->
-  <g>
-    <circle cx="400" cy="250" r="40" fill="rgba(232,228,220,0.04)" stroke="rgba(232,228,220,0.12)" stroke-width="0.6"/>
-    <circle cx="400" cy="250" r="24" fill="rgba(232,228,220,0.04)"/>
-    <circle cx="400" cy="250" r="6.5" fill="rgba(232,228,220,0.85)"/>
-    <circle cx="400" cy="250" r="3" fill="rgba(232,228,220,0.98)"/>
-  </g>
+  <!-- ── CENTRAL HUB ──────────────────────────────────────────────────── -->
+  <!-- Lines to clusters -->
+  <line x1="400" y1="250" x2="248" y2="145" stroke="rgba(255,255,255,0.14)" stroke-width="0.7"/>
+  <line x1="400" y1="250" x2="550" y2="128" stroke="rgba(255,255,255,0.14)" stroke-width="0.7"/>
+  <line x1="400" y1="250" x2="255" y2="382" stroke="rgba(255,255,255,0.12)" stroke-width="0.7"/>
+  <line x1="400" y1="250" x2="548" y2="370" stroke="rgba(255,255,255,0.12)" stroke-width="0.7"/>
 
-  <!-- Bridge nodes -->
-  <g fill="rgba(232,228,220,0.50)">
-    <circle cx="308" cy="192" r="3"/><circle cx="492" cy="192" r="3"/>
-    <circle cx="308" cy="308" r="3"/><circle cx="492" cy="308" r="3"/>
-  </g>
-
-  <!-- Cluster labels -->
-  <g font-family="monospace" font-size="7.5" letter-spacing="0.13em" text-anchor="middle">
-    <text x="145" y="44" fill="rgba(210,28,130,0.45)">BRAND · LUXURY</text>
-    <text x="652" y="44" fill="rgba(91,194,252,0.45)">MEDIA · CULTURE</text>
-    <text x="148" y="476" fill="rgba(108,32,210,0.45)">INDUSTRY · CORP</text>
-    <text x="652" y="476" fill="rgba(218,152,14,0.45)">LIFESTYLE · HEALTH</text>
-    <text x="400" y="268" fill="rgba(232,228,220,0.30)">ECOSYSTEM</text>
-  </g>
+  <!-- Center glow -->
+  <circle cx="400" cy="250" r="40" fill="rgba(232,228,220,0.03)" filter="url(#i3-soft)"/>
+  <circle cx="400" cy="250" r="18" fill="none" stroke="rgba(232,228,220,0.2)" stroke-width="0.8" stroke-dasharray="3 7"/>
+  <circle cx="400" cy="250" r="8"  fill="rgba(232,228,220,0.6)"/>
+  <circle cx="400" cy="250" r="3"  fill="rgba(255,255,255,0.9)"/>
 </svg>
