@@ -1,0 +1,99 @@
+<svg viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg2" cx="25%" cy="50%" r="40%"><stop offset="0%" stop-color="#0f0830"/><stop offset="100%" stop-color="#040315"/></radialGradient>
+    <radialGradient id="bg2r" cx="75%" cy="50%" r="40%"><stop offset="0%" stop-color="#0a1e35"/><stop offset="100%" stop-color="#040315"/></radialGradient>
+    <linearGradient id="tr2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6c20d2" stop-opacity="0.18"/><stop offset="50%" stop-color="#3a0f60" stop-opacity="0.06"/><stop offset="100%" stop-color="#5bc2fc" stop-opacity="0.18"/></linearGradient>
+    <radialGradient id="rg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.22"/><stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/></radialGradient>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(232,228,220,0.35)"/></marker>
+  </defs>
+  <rect width="800" height="500" fill="#040315"/>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <rect width="800" height="500" fill="url(#bg2r)"/>
+  <!-- Transition zone -->
+  <rect x="300" y="0" width="200" height="500" fill="url(#tr2)"/>
+  <!-- Divider line -->
+  <line x1="400" y1="0" x2="400" y2="500" stroke="rgba(232,228,220,0.06)" stroke-width="1"/>
+
+  <!-- LEFT: Linear/hierarchical model (old) -->
+  <!-- Boxes -->
+  <g fill="rgba(108,32,210,0.10)" stroke="rgba(108,32,210,0.35)" stroke-width="0.7">
+    <rect x="108" y="68" width="164" height="46" rx="2"/>
+    <rect x="108" y="178" width="164" height="46" rx="2"/>
+    <rect x="108" y="288" width="164" height="46" rx="2"/>
+    <rect x="108" y="398" width="164" height="46" rx="2"/>
+  </g>
+  <!-- Box labels -->
+  <g font-family="monospace" font-size="8" fill="rgba(232,228,220,0.38)" letter-spacing="0.10em" text-anchor="middle">
+    <text x="190" y="96">IDEA</text>
+    <text x="190" y="206">PLANNING</text>
+    <text x="190" y="316">EXECUTION</text>
+    <text x="190" y="426">OUTPUT</text>
+  </g>
+  <!-- Connecting arrows down -->
+  <g stroke="rgba(108,32,210,0.5)" stroke-width="0.8" fill="none" marker-end="url(#arr)">
+    <line x1="190" y1="114" x2="190" y2="174"/>
+    <line x1="190" y1="224" x2="190" y2="284"/>
+    <line x1="190" y1="334" x2="190" y2="394"/>
+  </g>
+  <!-- Side branches (linear rigidity) -->
+  <g stroke="rgba(108,32,210,0.2)" stroke-width="0.5" fill="none">
+    <line x1="108" y1="91" x2="58" y2="91"/><circle cx="52" cy="91" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="108" y1="201" x2="58" y2="201"/><circle cx="52" cy="201" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="108" y1="311" x2="58" y2="311"/><circle cx="52" cy="311" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="108" y1="421" x2="58" y2="421"/><circle cx="52" cy="421" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="272" y1="91" x2="322" y2="91"/><circle cx="328" cy="91" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="272" y1="201" x2="322" y2="201"/><circle cx="328" cy="201" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="272" y1="311" x2="322" y2="311"/><circle cx="328" cy="311" r="2.5" fill="rgba(108,32,210,0.35)"/>
+    <line x1="272" y1="421" x2="322" y2="421"/><circle cx="328" cy="421" r="2.5" fill="rgba(108,32,210,0.35)"/>
+  </g>
+  <!-- Linear label -->
+  <text x="190" y="490" font-family="monospace" font-size="7.5" fill="rgba(232,228,220,0.22)" letter-spacing="0.14em" text-anchor="middle">SEQUENTIAL MODEL</text>
+
+  <!-- CENTER: Transformation particles + arrow -->
+  <g fill="#5bc2fc" opacity="0.22">
+    <circle cx="340" cy="140" r="1.5"/><circle cx="360" cy="190" r="1.5"/><circle cx="380" cy="250" r="2"/>
+    <circle cx="360" cy="310" r="1.5"/><circle cx="340" cy="360" r="1.5"/>
+    <circle cx="420" cy="140" r="1.5"/><circle cx="440" cy="190" r="1.5"/>
+    <circle cx="420" cy="310" r="1.5"/><circle cx="440" cy="360" r="1.5"/>
+  </g>
+  <line x1="350" y1="250" x2="450" y2="250" stroke="rgba(232,228,220,0.25)" stroke-width="0.8" stroke-dasharray="4,6"/>
+
+  <!-- RIGHT: Networked/circular model (new) -->
+  <ellipse cx="610" cy="250" rx="110" ry="105" fill="url(#rg2)"/>
+  <!-- Circular ring -->
+  <circle cx="610" cy="250" r="96" fill="none" stroke="#5bc2fc" stroke-width="0.5" opacity="0.16"/>
+  <!-- Hub → nodes -->
+  <g stroke="#5bc2fc" stroke-width="0.7" opacity="0.28" fill="none">
+    <line x1="610" y1="250" x2="610" y2="120"/><line x1="610" y1="250" x2="706" y2="175"/>
+    <line x1="610" y1="250" x2="706" y2="325"/><line x1="610" y1="250" x2="610" y2="380"/>
+    <line x1="610" y1="250" x2="514" y2="325"/><line x1="610" y1="250" x2="514" y2="175"/>
+  </g>
+  <!-- Ring connections -->
+  <polygon points="610,120 706,175 706,325 610,380 514,325 514,175" fill="none" stroke="#5bc2fc" stroke-width="0.45" opacity="0.18"/>
+  <!-- Cross connections -->
+  <g stroke="#5bc2fc" stroke-width="0.35" opacity="0.1" fill="none">
+    <line x1="610" y1="120" x2="706" y2="325"/><line x1="706" y1="175" x2="514" y2="325"/>
+    <line x1="706" y1="325" x2="514" y2="175"/><line x1="514" y1="325" x2="610" y2="120"/>
+  </g>
+  <!-- Hub center -->
+  <circle cx="610" cy="250" r="18" fill="#5bc2fc" opacity="0.10"/>
+  <circle cx="610" cy="250" r="6.5" fill="#5bc2fc"/>
+  <circle cx="610" cy="250" r="3" fill="rgba(232,228,220,0.96)"/>
+  <!-- Ring nodes -->
+  <g>
+    <circle cx="610" cy="120" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="610" cy="120" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="610" cy="120" r="2.2" fill="rgba(232,228,220,0.9)"/>
+    <circle cx="706" cy="175" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="706" cy="175" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="706" cy="175" r="2.2" fill="rgba(232,228,220,0.9)"/>
+    <circle cx="706" cy="325" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="706" cy="325" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="706" cy="325" r="2.2" fill="rgba(232,228,220,0.9)"/>
+    <circle cx="610" cy="380" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="610" cy="380" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="610" cy="380" r="2.2" fill="rgba(232,228,220,0.9)"/>
+    <circle cx="514" cy="325" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="514" cy="325" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="514" cy="325" r="2.2" fill="rgba(232,228,220,0.9)"/>
+    <circle cx="514" cy="175" r="15" fill="#5bc2fc" opacity="0.06"/><circle cx="514" cy="175" r="5" fill="#5bc2fc" opacity="0.88"/><circle cx="514" cy="175" r="2.2" fill="rgba(232,228,220,0.9)"/>
+  </g>
+  <!-- Node labels right side -->
+  <g font-family="monospace" font-size="8" fill="rgba(232,228,220,0.30)" letter-spacing="0.10em" text-anchor="middle">
+    <text x="610" y="100">IDEA</text><text x="738" y="168">PLANNING</text>
+    <text x="738" y="338">EXECUTION</text><text x="610" y="408">OUTPUT</text>
+    <text x="482" y="338">DATA</text><text x="480" y="168">CULTURE</text>
+    <text x="610" y="274">SYSTEM</text>
+  </g>
+  <text x="610" y="490" font-family="monospace" font-size="7.5" fill="rgba(232,228,220,0.22)" letter-spacing="0.14em" text-anchor="middle">SYSTEMIC MODEL</text>
+</svg>
