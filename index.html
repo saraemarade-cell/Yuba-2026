@@ -5,10 +5,8 @@
   <title>Yuba — L'ecosistema creativo che genera innovazione</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0A0A0F; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
-    #__bundler_loading { position: fixed; bottom: 20px; right: 20px; font: 13px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; color: #666; background: #fff; padding: 8px 14px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); z-index: 10000; }
-    #__bundler_thumbnail { position: fixed; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #0A0A0F; z-index: 9999; }
-    #__bundler_thumbnail svg { width: 100%; height: 100%; object-fit: contain; }
+    body { background: #0A0A0F; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+    #__bundler_loading { display: none; }
     #__bundler_placeholder { color: #999; font-size: 14px; }
   </style>
   <noscript>
@@ -19,19 +17,6 @@
   </noscript>
 </head>
 <body>
-  <div id="__bundler_thumbnail">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#0A0A0F"></rect>
-    <g transform="translate(0,400)" fill="none" stroke-linecap="round">
-      <path d="M-50 0 C 150 -120, 300 120, 500 0 S 850 -120, 1050 0 S 1300 120, 1450 0" stroke="#0F2150" stroke-width="4" opacity="0.9"></path>
-      <path d="M-50 0 C 150 -90, 300 90, 500 0 S 850 -90, 1050 0 S 1300 90, 1450 0" stroke="#0080FF" stroke-width="2.5" opacity="0.5"></path>
-      <path d="M-50 0 C 150 -60, 300 60, 500 0 S 850 -60, 1050 0 S 1300 60, 1450 0" stroke="#C8FF00" stroke-width="2" opacity="0.9"></path>
-      <circle cx="600" cy="0" r="8" fill="#C8FF00"></circle>
-    </g>
-    <text x="600" y="640" text-anchor="middle" font-family="system-ui, sans-serif" font-size="56" font-weight="600" fill="#F0EDE8" letter-spacing="6">YUBA</text>
-    <text x="600" y="690" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="400" fill="#A8A49E" letter-spacing="8">ECOSISTEMA  CREATIVO</text>
-  </svg>
-</div>
   <div id="__bundler_loading">Unpacking...</div>
 
   <script>
