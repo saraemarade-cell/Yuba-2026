@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="i4bg" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#070418"/>
+      <stop offset="100%" stop-color="#040315"/>
+    </radialGradient>
+    <radialGradient id="i4gGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i4gLime" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dbfe69" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#dbfe69" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="i4glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="i4sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="i4dots" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="21" cy="21" r="0.7" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
+    <clipPath id="i4cp1"><circle cx="230" cy="135" r="38"/></clipPath>
+    <clipPath id="i4cp2"><circle cx="570" cy="135" r="38"/></clipPath>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#i4bg)"/>
+  <rect width="800" height="500" fill="url(#i4dots)"/>
+
+  <!-- ═══════════════════════════════════════
+       CAPITAL FLOW LINES (angels → startup)
+  ═════════════════════════════════════════════ -->
+  <!-- Left angel → startup -->
+  <line x1="254" y1="170" x2="372" y2="348"
+        stroke="#da980e" stroke-width="1.2" stroke-dasharray="5 9" stroke-opacity="0.50"/>
+  <circle cx="293" cy="229" r="2.5" fill="#da980e" fill-opacity="0.48"/>
+  <circle cx="333" cy="289" r="2.5" fill="#da980e" fill-opacity="0.40"/>
+
+  <!-- Right angel → startup -->
+  <line x1="546" y1="170" x2="428" y2="348"
+        stroke="#da980e" stroke-width="1.2" stroke-dasharray="5 9" stroke-opacity="0.50"/>
+  <circle cx="507" cy="229" r="2.5" fill="#da980e" fill-opacity="0.48"/>
+  <circle cx="467" cy="289" r="2.5" fill="#da980e" fill-opacity="0.40"/>
+
+  <!-- Angels ↔ network arc (top) -->
+  <path d="M 272,118 C 330,90 470,90 528,118"
+        fill="none" stroke="#da980e" stroke-width="0.8" stroke-dasharray="3 10" stroke-opacity="0.20"/>
+
+  <!-- ═══════════════════════════════════════
+       GROWTH TRAJECTORY (startup → upward)
+  ═════════════════════════════════════════════ -->
+  <line x1="400" y1="358" x2="400" y2="185"
+        stroke="#dbfe69" stroke-width="0.9" stroke-dasharray="4 8" stroke-opacity="0.28"/>
+  <!-- Milestone nodes -->
+  <circle cx="400" cy="308" r="3.5" fill="#dbfe69" fill-opacity="0.44"/>
+  <circle cx="400" cy="258" r="4"   fill="#dbfe69" fill-opacity="0.36"/>
+  <circle cx="400" cy="208" r="3.5" fill="#dbfe69" fill-opacity="0.28"/>
+  <!-- Orbit halos at trajectory apex -->
+  <circle cx="400" cy="185" r="18" fill="none" stroke="#dbfe69" stroke-width="0.6" stroke-opacity="0.18" stroke-dasharray="3 7"/>
+  <circle cx="400" cy="185" r="32" fill="none" stroke="#5bc2fc" stroke-width="0.5" stroke-opacity="0.11" stroke-dasharray="2 9"/>
+
+  <!-- ═══════════════════════════════════════
+       STARTUP / SEEDLING NODE (400, 382)
+  ═════════════════════════════════════════════ -->
+  <circle cx="400" cy="382" r="65" fill="url(#i4gLime)" filter="url(#i4glow)"/>
+  <!-- Outer badge -->
+  <circle cx="400" cy="382" r="44" fill="rgba(219,254,105,0.07)" stroke="#dbfe69" stroke-width="1.4" stroke-opacity="0.44"/>
+  <!-- Inner orbit ring -->
+  <circle cx="400" cy="382" r="28" fill="none" stroke="#dbfe69" stroke-width="0.9" stroke-dasharray="3 6" stroke-opacity="0.28"/>
+
+  <!-- Stem -->
+  <line x1="400" y1="408" x2="400" y2="366"
+        stroke="#5bc2fc" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.82"/>
+  <!-- Ground line -->
+  <line x1="384" y1="408" x2="416" y2="408"
+        stroke="#5bc2fc" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.55"/>
+  <!-- Root tendrils -->
+  <line x1="400" y1="408" x2="382" y2="418"
+        stroke="#5bc2fc" stroke-width="1.0" stroke-linecap="round" stroke-opacity="0.38"/>
+  <line x1="400" y1="408" x2="418" y2="418"
+        stroke="#5bc2fc" stroke-width="1.0" stroke-linecap="round" stroke-opacity="0.38"/>
+
+  <!-- Left leaf -->
+  <path d="M 400,388 C 380,380 366,364 370,352 C 382,366 394,378 400,382 Z"
+        fill="#dbfe69" fill-opacity="0.58" stroke="#dbfe69" stroke-width="0.9" stroke-opacity="0.72"/>
+  <!-- Right leaf -->
+  <path d="M 400,382 C 420,374 434,358 430,346 C 418,360 406,372 400,376 Z"
+        fill="#dbfe69" fill-opacity="0.52" stroke="#dbfe69" stroke-width="0.9" stroke-opacity="0.68"/>
+  <!-- Bud -->
+  <circle cx="400" cy="364" r="5.5" fill="#dbfe69" fill-opacity="0.80"/>
+  <circle cx="400" cy="364" r="2.5" fill="#dbfe69" fill-opacity="0.96"/>
+
+  <!-- ═══════════════════════════════════════
+       ANGEL INVESTOR NODE 1 — Left (230, 135)
+  ═════════════════════════════════════════════ -->
+  <circle cx="230" cy="135" r="80" fill="url(#i4gGold)" filter="url(#i4glow)"/>
+
+  <!-- Left wing -->
+  <path d="M 190,152 C 152,132 144,96 165,74 C 178,100 186,130 190,148 Z"
+        fill="#da980e" fill-opacity="0.14" stroke="#da980e" stroke-width="1.4" stroke-opacity="0.52"/>
+  <path d="M 190,148 C 170,118 160,94 167,76"
+        fill="none" stroke="#da980e" stroke-width="0.8" stroke-opacity="0.28"/>
+  <!-- Right wing -->
+  <path d="M 270,152 C 308,132 316,96 295,74 C 282,100 274,130 270,148 Z"
+        fill="#da980e" fill-opacity="0.14" stroke="#da980e" stroke-width="1.4" stroke-opacity="0.52"/>
+  <path d="M 270,148 C 290,118 300,94 293,76"
+        fill="none" stroke="#da980e" stroke-width="0.8" stroke-opacity="0.28"/>
+
+  <!-- Badge -->
+  <circle cx="230" cy="135" r="42"
+        fill="rgba(218,152,14,0.09)" stroke="#da980e" stroke-width="1.6" stroke-opacity="0.58"/>
+  <circle cx="230" cy="135" r="28"
+        fill="none" stroke="#da980e" stroke-width="1.0" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <!-- Person head -->
+  <circle cx="230" cy="123" r="13" fill="#da980e" fill-opacity="0.88" clip-path="url(#i4cp1)"/>
+  <!-- Person body -->
+  <ellipse cx="230" cy="152" rx="19" ry="14" fill="#da980e" fill-opacity="0.85" clip-path="url(#i4cp1)"/>
+
+  <!-- ═══════════════════════════════════════
+       ANGEL INVESTOR NODE 2 — Right (570, 135)
+  ═════════════════════════════════════════════ -->
+  <circle cx="570" cy="135" r="80" fill="url(#i4gGold)" filter="url(#i4glow)"/>
+
+  <!-- Left wing -->
+  <path d="M 530,152 C 492,132 484,96 505,74 C 518,100 526,130 530,148 Z"
+        fill="#da980e" fill-opacity="0.14" stroke="#da980e" stroke-width="1.4" stroke-opacity="0.52"/>
+  <path d="M 530,148 C 510,118 500,94 507,76"
+        fill="none" stroke="#da980e" stroke-width="0.8" stroke-opacity="0.28"/>
+  <!-- Right wing -->
+  <path d="M 610,152 C 648,132 656,96 635,74 C 622,100 614,130 610,148 Z"
+        fill="#da980e" fill-opacity="0.14" stroke="#da980e" stroke-width="1.4" stroke-opacity="0.52"/>
+  <path d="M 610,148 C 630,118 640,94 633,76"
+        fill="none" stroke="#da980e" stroke-width="0.8" stroke-opacity="0.28"/>
+
+  <!-- Badge -->
+  <circle cx="570" cy="135" r="42"
+        fill="rgba(218,152,14,0.09)" stroke="#da980e" stroke-width="1.6" stroke-opacity="0.58"/>
+  <circle cx="570" cy="135" r="28"
+        fill="none" stroke="#da980e" stroke-width="1.0" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <!-- Person head -->
+  <circle cx="570" cy="123" r="13" fill="#da980e" fill-opacity="0.88" clip-path="url(#i4cp2)"/>
+  <!-- Person body -->
+  <ellipse cx="570" cy="152" rx="19" ry="14" fill="#da980e" fill-opacity="0.85" clip-path="url(#i4cp2)"/>
+
+  <!-- Ambient particles -->
+  <circle cx="112" cy="78"  r="1.5" fill="#da980e" fill-opacity="0.20"/>
+  <circle cx="688" cy="78"  r="1.5" fill="#da980e" fill-opacity="0.18"/>
+  <circle cx="740" cy="380" r="1.2" fill="#dbfe69" fill-opacity="0.14"/>
+  <circle cx="60"  cy="380" r="1.2" fill="#dbfe69" fill-opacity="0.14"/>
+  <circle cx="400" cy="48"  r="1.5" fill="#5bc2fc" fill-opacity="0.14"/>
+  <circle cx="740" cy="200" r="1.2" fill="#da980e" fill-opacity="0.15"/>
+  <circle cx="60"  cy="200" r="1.2" fill="#da980e" fill-opacity="0.14"/>
+</svg>

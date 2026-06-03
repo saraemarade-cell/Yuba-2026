@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="i3bg" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#070520"/>
+      <stop offset="100%" stop-color="#040315"/>
+    </radialGradient>
+    <radialGradient id="i3hub" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(232,228,220,0.35)"/>
+      <stop offset="100%" stop-color="rgba(232,228,220,0)"/>
+    </radialGradient>
+    <radialGradient id="i3gA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5bc2fc" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#5bc2fc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3gP" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d21c82" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d21c82" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3gV" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6c20d2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6c20d2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3gG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#da980e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#da980e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="i3gL" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dbfe69" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#dbfe69" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="i3glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="i3sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="i3dots" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="21" cy="21" r="0.7" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#i3bg)"/>
+  <rect width="800" height="500" fill="url(#i3dots)"/>
+
+  <!-- ═══════════════════════════════════════
+       CONNECTION LINES (hub → each org node)
+  ═════════════════════════════════════════════ -->
+  <!-- Hub at (400,250), nodes at various positions -->
+
+  <!-- To Corporate building (400, 76) — N -->
+  <line x1="400" y1="215" x2="400" y2="116" stroke="rgba(255,255,255,0.22)" stroke-width="1.2"/>
+  <!-- Mid-dot -->
+  <circle cx="400" cy="166" r="2.5" fill="rgba(255,255,255,0.35)"/>
+
+  <!-- To Tech hexagon (610, 148) — NE -->
+  <line x1="425" y1="228" x2="582" y2="172" stroke="#5bc2fc" stroke-width="1.0" stroke-opacity="0.28"/>
+  <circle cx="503" cy="200" r="2.5" fill="#5bc2fc" fill-opacity="0.40"/>
+
+  <!-- To Startup triangle (640, 360) — SE -->
+  <line x1="426" y1="268" x2="614" y2="336" stroke="#dbfe69" stroke-width="1.0" stroke-opacity="0.26"/>
+  <circle cx="520" cy="302" r="2.5" fill="#dbfe69" fill-opacity="0.38"/>
+
+  <!-- To Creative circle (240, 380) — SW -->
+  <line x1="374" y1="268" x2="268" y2="342" stroke="#d21c82" stroke-width="1.0" stroke-opacity="0.26"/>
+  <circle cx="321" cy="305" r="2.5" fill="#d21c82" fill-opacity="0.38"/>
+
+  <!-- To Finance diamond (160, 148) — NW -->
+  <line x1="375" y1="228" x2="212" y2="172" stroke="#da980e" stroke-width="1.0" stroke-opacity="0.28"/>
+  <circle cx="293" cy="200" r="2.5" fill="#da980e" fill-opacity="0.40"/>
+
+  <!-- CROSS connections (ecosystem, not just hub-spoke) -->
+  <!-- Corporate ↔ Tech -->
+  <line x1="420" y1="78" x2="595" y2="138" stroke="rgba(255,255,255,0.10)" stroke-width="0.7" stroke-dasharray="3 8"/>
+  <!-- Tech ↔ Startup -->
+  <line x1="634" y1="174" x2="646" y2="334" stroke="rgba(255,255,255,0.10)" stroke-width="0.7" stroke-dasharray="3 8"/>
+  <!-- Finance ↔ Corporate -->
+  <line x1="182" y1="140" x2="380" y2="78" stroke="rgba(255,255,255,0.10)" stroke-width="0.7" stroke-dasharray="3 8"/>
+  <!-- Creative ↔ Startup -->
+  <line x1="268" y1="362" x2="620" y2="364" stroke="rgba(255,255,255,0.08)" stroke-width="0.7" stroke-dasharray="3 8"/>
+
+  <!-- ═══════════════════════════════════════
+       ORG NODE 1 — Corporate Building (top, 400, 76)
+       Recognizable: building rectangle + window grid
+  ═════════════════════════════════════════════ -->
+  <circle cx="400" cy="76" r="50" fill="url(#i3hub)" filter="url(#i3glow)"/>
+  <!-- Building -->
+  <rect x="374" y="46" width="52" height="60" rx="4" fill="rgba(232,228,220,0.08)" stroke="rgba(232,228,220,0.55)" stroke-width="1.6"/>
+  <!-- Windows 2×3 -->
+  <rect x="381" y="54" width="14" height="10" rx="2" fill="rgba(232,228,220,0.42)"/>
+  <rect x="401" y="54" width="14" height="10" rx="2" fill="rgba(232,228,220,0.42)"/>
+  <rect x="381" y="70" width="14" height="10" rx="2" fill="rgba(232,228,220,0.35)"/>
+  <rect x="401" y="70" width="14" height="10" rx="2" fill="rgba(232,228,220,0.35)"/>
+  <rect x="381" y="86" width="14" height="10" rx="2" fill="rgba(232,228,220,0.28)"/>
+  <rect x="401" y="86" width="14" height="10" rx="2" fill="rgba(232,228,220,0.28)"/>
+  <!-- Roof line -->
+  <line x1="368" y1="46" x2="432" y2="46" stroke="rgba(232,228,220,0.40)" stroke-width="1.2"/>
+
+  <!-- ═══════════════════════════════════════
+       ORG NODE 2 — Tech Hexagon (NE, 618, 150)
+  ═════════════════════════════════════════════ -->
+  <circle cx="618" cy="150" r="46" fill="url(#i3gA)" filter="url(#i3glow)"/>
+  <!-- Hexagon outline -->
+  <polygon points="618,122 643,136 643,164 618,178 593,164 593,136" fill="#5bc2fc" fill-opacity="0.08" stroke="#5bc2fc" stroke-width="1.6" stroke-opacity="0.60"/>
+  <!-- Inner circuit: 3 dots + connecting lines -->
+  <circle cx="608" cy="146" r="4" fill="#5bc2fc" fill-opacity="0.72"/>
+  <circle cx="628" cy="146" r="4" fill="#5bc2fc" fill-opacity="0.72"/>
+  <circle cx="618" cy="162" r="4" fill="#5bc2fc" fill-opacity="0.72"/>
+  <line x1="608" y1="146" x2="628" y2="146" stroke="#5bc2fc" stroke-width="1.2" stroke-opacity="0.45"/>
+  <line x1="608" y1="146" x2="618" y2="162" stroke="#5bc2fc" stroke-width="1.2" stroke-opacity="0.42"/>
+  <line x1="628" y1="146" x2="618" y2="162" stroke="#5bc2fc" stroke-width="1.2" stroke-opacity="0.40"/>
+
+  <!-- ═══════════════════════════════════════
+       ORG NODE 3 — Startup Triangle (SE, 648, 362)
+       Upward triangle = growth / startup
+  ═════════════════════════════════════════════ -->
+  <circle cx="648" cy="362" r="46" fill="url(#i3gL)" filter="url(#i3glow)"/>
+  <!-- Triangle -->
+  <polygon points="648,330 678,386 618,386" fill="#dbfe69" fill-opacity="0.08" stroke="#dbfe69" stroke-width="1.6" stroke-opacity="0.60"/>
+  <!-- Inner spark/star -->
+  <circle cx="648" cy="366" r="6" fill="#dbfe69" fill-opacity="0.70"/>
+  <circle cx="648" cy="366" r="3" fill="#dbfe69" fill-opacity="0.90"/>
+  <!-- Small rays from spark -->
+  <line x1="648" y1="356" x2="648" y2="348" stroke="#dbfe69" stroke-width="1.2" stroke-opacity="0.50"/>
+  <line x1="656" y1="360" x2="662" y2="355" stroke="#dbfe69" stroke-width="1.0" stroke-opacity="0.42"/>
+  <line x1="640" y1="360" x2="634" y2="355" stroke="#dbfe69" stroke-width="1.0" stroke-opacity="0.42"/>
+
+  <!-- ═══════════════════════════════════════
+       ORG NODE 4 — Creative Agency Circle (SW, 154, 360)
+       Circle with inner elements = creative/brand
+  ═════════════════════════════════════════════ -->
+  <circle cx="154" cy="360" r="46" fill="url(#i3gP)" filter="url(#i3glow)"/>
+  <!-- Outer ring -->
+  <circle cx="154" cy="360" r="32" fill="#d21c82" fill-opacity="0.08" stroke="#d21c82" stroke-width="1.6" stroke-opacity="0.58"/>
+  <!-- Inner concentric ring -->
+  <circle cx="154" cy="360" r="18" fill="none" stroke="#d21c82" stroke-width="1.2" stroke-opacity="0.42" stroke-dasharray="3 5"/>
+  <!-- Inner dot -->
+  <circle cx="154" cy="360" r="7" fill="#d21c82" fill-opacity="0.72"/>
+  <circle cx="154" cy="360" r="3" fill="#d21c82" fill-opacity="0.90"/>
+  <!-- 4 small satellite dots on inner ring -->
+  <circle cx="154" cy="342" r="2.5" fill="#d21c82" fill-opacity="0.55"/>
+  <circle cx="172" cy="360" r="2.5" fill="#d21c82" fill-opacity="0.55"/>
+  <circle cx="154" cy="378" r="2.5" fill="#d21c82" fill-opacity="0.50"/>
+  <circle cx="136" cy="360" r="2.5" fill="#d21c82" fill-opacity="0.50"/>
+
+  <!-- ═══════════════════════════════════════
+       ORG NODE 5 — Finance Diamond (NW, 182, 148)
+       Diamond = precision / value / investment
+  ═════════════════════════════════════════════ -->
+  <circle cx="182" cy="148" r="46" fill="url(#i3gG)" filter="url(#i3glow)"/>
+  <!-- Diamond shape -->
+  <polygon points="182,118 216,148 182,178 148,148" fill="#da980e" fill-opacity="0.08" stroke="#da980e" stroke-width="1.6" stroke-opacity="0.58"/>
+  <!-- Inner diamond -->
+  <polygon points="182,132 198,148 182,164 166,148" fill="none" stroke="#da980e" stroke-width="1.2" stroke-opacity="0.40"/>
+  <!-- Center dot -->
+  <circle cx="182" cy="148" r="6" fill="#da980e" fill-opacity="0.72"/>
+  <circle cx="182" cy="148" r="2.5" fill="#da980e" fill-opacity="0.90"/>
+  <!-- Facet lines suggesting gem cut -->
+  <line x1="182" y1="118" x2="182" y2="132" stroke="#da980e" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="182" y1="164" x2="182" y2="178" stroke="#da980e" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="148" y1="148" x2="166" y2="148" stroke="#da980e" stroke-width="1" stroke-opacity="0.35"/>
+  <line x1="198" y1="148" x2="216" y2="148" stroke="#da980e" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- ═══════════════════════════════════════
+       CENTRAL HUB — Yuba / Company
+  ═════════════════════════════════════════════ -->
+  <circle cx="400" cy="250" r="70" fill="url(#i3hub)" filter="url(#i3glow)"/>
+  <!-- Outer ring (dashed) -->
+  <circle cx="400" cy="250" r="52" fill="none" stroke="rgba(232,228,220,0.25)" stroke-width="1.0" stroke-dasharray="4 7"/>
+  <!-- Main ring -->
+  <circle cx="400" cy="250" r="38" fill="rgba(232,228,220,0.06)" stroke="rgba(232,228,220,0.55)" stroke-width="2.0"/>
+  <!-- Inner ring -->
+  <circle cx="400" cy="250" r="22" fill="none" stroke="rgba(232,228,220,0.35)" stroke-width="1.2"/>
+  <!-- Core dot -->
+  <circle cx="400" cy="250" r="10" fill="rgba(232,228,220,0.85)"/>
+  <circle cx="400" cy="250" r="4"  fill="rgba(255,255,255,0.95)"/>
+
+  <!-- Ambient particles -->
+  <circle cx="740" cy="80"  r="1.5" fill="#5bc2fc" fill-opacity="0.18"/>
+  <circle cx="60"  cy="420" r="1.5" fill="#d21c82" fill-opacity="0.16"/>
+  <circle cx="700" cy="440" r="1.2" fill="#dbfe69" fill-opacity="0.14"/>
+  <circle cx="90"  cy="90"  r="1.2" fill="#da980e" fill-opacity="0.16"/>
+</svg>
